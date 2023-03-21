@@ -38,19 +38,15 @@ const ykFlag = ['konachan', 'yande.re'].some(e => {
 const poolFlag = Boolean(params.get('path')?.includes('pool'))
 
 const imgProxys = [
-  { text: 'cf0', value: 'https://kwc.cocomi.cf/' },
+  { text: '不使用', value: '' },
   { text: 'deno0', value: 'https://cors-fetch.deno.dev/' },
   { text: 'deno1', value: 'https://cors.deno.dev/' },
   { text: 'deno2', value: 'https://cors.kanata.ml/' },
   { text: 'nf0', value: 'https://nfn.kanata.ml/' },
+  { text: 'cf0', value: 'https://kwc.cocomi.cf/' },
 ]
 
-const apiProxys = imgProxys
-
-localStorage.setItem('__imgProxy', imgProxys[0].value)
-localStorage.setItem('__apiProxy', apiProxys[0].value)
-location.reload()
-
+const apiProxys = imgProxys.slice(1)
 
 const store = Vue.observable<AppState>({
   requestState: false,
