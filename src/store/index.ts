@@ -38,7 +38,6 @@ const ykFlag = ['konachan', 'yande.re'].some(e => {
 const poolFlag = Boolean(params.get('path')?.includes('pool'))
 
 const imgProxys = [
-  { text: 'cf0', value: 'https://kwc.cocomi.cf/' },
   { text: 'nf0', value: 'https://nfn.kanata.ml/' },
   { text: 'deno0', value: 'https://cors-fetch.deno.dev/' },
   { text: 'deno1', value: 'https://cors.deno.dev/' },
