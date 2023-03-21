@@ -39,13 +39,13 @@ const poolFlag = Boolean(params.get('path')?.includes('pool'))
 
 const imgProxys = [
   { text: 'cf0', value: 'https://kwc.cocomi.cf/' },
+  { text: 'nf0', value: 'https://nfn.kanata.ml/' },
   { text: 'deno0', value: 'https://cors-fetch.deno.dev/' },
   { text: 'deno1', value: 'https://cors.deno.dev/' },
   { text: 'deno2', value: 'https://cors.kanata.ml/' },
-  { text: 'nf0', value: 'https://nfn.kanata.ml/' },
 ]
 
-const apiProxys = imgProxys.slice(1)
+const apiProxys = imgProxys
 
 const store = Vue.observable<AppState>({
   requestState: false,
